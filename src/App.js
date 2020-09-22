@@ -21,7 +21,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className="App">
-      <AppBar style={{ background: "#f0f0f0f0" }} position="static">
+      <AppBar style={{ background: "#f0f0f0" }} position="sticky">
         <Toolbar>
           <NavLink to={"/"} exact>
             <img src={logo} alt={"Error"} height="40px" />

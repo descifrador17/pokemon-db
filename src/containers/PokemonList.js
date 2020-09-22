@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import { GetPokemonList } from "../actions/PokemonActions";
-import { Link } from "react-router-dom";
+import PokemonListCard from "../component/PokemonListCard";
 
 const PokemonList = () => {
   const dispatch = useDispatch();
@@ -19,12 +19,7 @@ const PokemonList = () => {
   const showData = () => {
     if (!_.isEmpty(pokemonList.data)) {
       return pokemonList.data.map((el) => {
-        return (
-          <div>
-            <p>{el.name}</p>
-            <Link to={`/pokemon/${el.name}`}>details</Link>
-          </div>
-        );
+        return <PokemonListCard key={el.name} name={el.name} />;
       });
     }
 
