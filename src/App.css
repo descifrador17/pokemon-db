@@ -2,3 +2,13 @@
   text-align: center;
   margin: 0px;
 }
+
+.pagination {
+  display: flex;
+  width: 500px;
+  margin: auto;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
